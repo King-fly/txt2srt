@@ -14,7 +14,7 @@
 ### 方法1：本地源码安装（支持修改代码）
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/txt2srt.git
+git clone https://github.com/king-fly/txt2srt.git
 cd txt2srt
 
 # 本地安装（支持 --editable 开发模式）
