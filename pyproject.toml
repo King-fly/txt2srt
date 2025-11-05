@@ -1,0 +1,35 @@
+[build-system]
+# 构建核心依赖（最低兼容版本）
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# 核心元数据（必填+常用字段）
+name = "txt2srt"
+version = "0.1.0"
+authors = [{ name = "king-fly" }]
+description = "轻量TXT转SRT工具，支持mm:ss/hh:mm:ss时间戳与文本分行"
+keywords = ["srt", "字幕转换", "txt2srt", "时间戳解析"]
+license = "MIT"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8+",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Utilities",
+  "Topic :: Multimedia :: Video"
+]
+requires-python = ">=3.8"
+dependencies = []  # 无第三方依赖，保持轻量
+
+# 命令行入口（核心功能）
+[project.scripts]
+txt2srt = "txt2srt.cli:main"
+
+# 项目链接（标准化）
+[project.urls]
+Homepage = "https://github.com/king-fly/txt2srt"
+
+# 可选：测试依赖（按需安装）
+[project.optional-dependencies]
+test = ["pytest>=7.0", "pytest-cov>=4.0"]
